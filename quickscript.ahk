@@ -1,7 +1,6 @@
 ﻿#SingleInstance  ; Allow only one instance of this script to be running.
 #NoEnv
 ;#Warn ;Ignores Initial Warnings
-Menu, Tray, Icon, ico\q.ico,1
 SetWorkingDir %A_ScriptDir% ;SET WORKING DIRECTORY TO SCRIPT DIRECTORY
 SetTitleMatchMode, 2 ;CHANGE SETTITLEMATCHMODE TO CONTAINING, FAST
 SetWinDelay, -1 ;SET WINDOW DELAY TO NONE
@@ -31,9 +30,13 @@ else
 }
 return
 #!CapsLock::ExitApp
+
 ;---------------------------------------  TEST KEY
 #+r::
-MsgBox,,test,,
+test := 123
+MsgBox,,%test%
+sleep, 1000
+MsgBox,,%test%
 return
 
 ;--------------------------------------- HOTSTRINGS
