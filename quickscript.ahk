@@ -35,7 +35,7 @@ return
 #+r::
 test := 123
 MsgBox,,%test%
-sleep, 1000
+sleep, 2000
 MsgBox,,%test%
 return
 
